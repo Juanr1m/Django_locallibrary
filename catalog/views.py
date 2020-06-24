@@ -69,3 +69,6 @@ class AllLoanedBooksListView(generic.ListView, PermissionRequiredMixin):
 
     def get_queryset(self):
         return BookInstance.objects.filter(status__exact='o').order_by('due_back')
+
+
+# https://developer.mozilla.org/ru/docs/Learn/Server-side/Django/Forms
